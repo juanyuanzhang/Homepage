@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">ShouHu</string>
-
+    <string name="app_name">HomePage</string>
     <string name="title_home">Home</string>
     <string name="title_bmi">BMI</string>
     <string name="title_sleep">睡眠</string>
@@ -12,8 +11,4 @@
     <string name="title_version">版本</string>
     <string name="title_use">使用說明</string>
     <string name="title_signout">登出</string>
-    <string name="title_activity_homepage">Homepage</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-
 </resources>
