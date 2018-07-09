@@ -8,6 +8,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
@@ -64,15 +66,19 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        //下方ButtomMenu(BottomNavigationView)去除動畫效果
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
 
         //動畫設置
         bindViews();
         Resources res = getResources();
-        anim = (AnimationDrawable) res.getDrawable(R.drawable.ball);
+        anim = (AnimationDrawable) res.getDrawable(R.drawable.home);
         pic.setImageDrawable(anim);
         // anim.start();
         //anim = (AnimationDrawable) pic.getBackground();
@@ -87,15 +93,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.bartitle,null);
         tvtitle =(TextView)view.findViewById(R.id.tvtitle);
-
-        //設定ToolBar樣式
+                //設定ToolBar樣式
         android.support.v7.app.ActionBar actionBar = getSupportActionBar(); //
         actionBar.setDisplayShowTitleEnabled(false); //隱藏程式標題
         actionBar.setLogo(R.mipmap.icon_96); //設定左上Icon
         actionBar.setDisplayUseLogoEnabled(true);//顯示LOGO
         actionBar.setDisplayShowHomeEnabled(true);
+
         actionBar.setCustomView(view); //設置自訂layout(view)來顯示中間標題
         actionBar.setDisplayShowCustomEnabled(true);
+
 
 
     }
@@ -194,4 +201,5 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
 }

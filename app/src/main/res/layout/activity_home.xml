@@ -41,17 +41,21 @@
             tools:layout_editor_absoluteX="221dp"
             tools:layout_editor_absoluteY="448dp" />
     </LinearLayout>
+        itemIconTint可設定Icon顏色
+        itemTextColor可設定Icon下方文字顏色
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_bright"
+        android:background="@color/navigbutton"
         android:theme="@style/AppTheme"
+        app:itemIconTint="@android:color/background_dark"
+        app:itemTextColor="@android:color/background_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" >
+        app:menu="@menu/navigation">
 
     </android.support.design.widget.BottomNavigationView>
 

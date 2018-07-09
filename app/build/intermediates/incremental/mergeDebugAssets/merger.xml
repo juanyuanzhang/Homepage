@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\AndroidProject\Homepage-anim\app\src\main\assets"/><source path="D:\AndroidProject\Homepage-anim\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\AndroidProject\Homepage-anim\app\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\2018Android yaun\Android\Homepage\app\src\main\assets"/><source path="D:\2018Android yaun\Android\Homepage\app\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\2018Android yaun\Android\Homepage\app\src\debug\assets"/></dataSet></merger>
